@@ -1,4 +1,5 @@
-(ns isbn-clojure.isbn_validate)
+(ns isbn-clojure.isbn_validate
+    (:require [clojure.string :as str]))
 
-(defn sayhello []
-    (println "Esse é um hello direto de isbn validate ; 3-598-21508-8"))
+(defn validate_isbn [isbn]
+    (str/split isbn #"-"))

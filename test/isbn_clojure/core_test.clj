@@ -1,7 +1,9 @@
 (ns isbn-clojure.core-test
   (:require [clojure.test :refer :all]
-            [isbn-clojure.core :refer :all]))
+            [isbn-clojure.core :refer :all]
+            [isbn-clojure.isbn_validate :as isbn_validate]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest validate-isbn
+  (testing "Validate some valid isbn"
+    (is (isbn_validate/validate_isbn 1) :false)
+    ))

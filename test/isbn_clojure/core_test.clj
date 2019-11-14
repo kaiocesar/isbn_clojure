@@ -5,5 +5,4 @@
 
 (deftest validate-isbn
   (testing "Validate some valid isbn"
-    (is (isbn_validate/validate_isbn 1) :false)
-    ))
+    (is (isbn_validate/validate_isbn "3598215088") false)))
